@@ -1,16 +1,13 @@
-n = int(input())
-
+count = int(input())
 l = []
 
-for i in range(n):
-    name = input()
-    l.append(name)
+for i in range(count):
+    l.append(input())
 
-l.reverse()
 output = []
 seen = set()
 
-for name in l:
+for name in reversed(l):
     if name not in seen:
         output.append(name)
         seen.add(name)
